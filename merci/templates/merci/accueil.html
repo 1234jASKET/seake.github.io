@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accueil</title>
+    {% load static %}
+</head>
+<body>
+
+<a href="/">Accueil</a> | 
+<a href="/contact/">Contact</a> | 
+<a href="/messages/">Messages</a>
+<hr>
+
+<h1>Bienvenue sur mon site !</h1>
+<p>Ce site est un petit projet Django avec une page de contact, une base de données, et une page d’accueil.</p>
+
+<img src="{% static 'merci/images/ma_photo.jpg' %}" alt="Photo" width="300">
+
+</body>
+</html>

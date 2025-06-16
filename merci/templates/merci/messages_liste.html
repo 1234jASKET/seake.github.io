@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Messages reçus</title>
+</head>
+<body>
+    <h1>Liste des messages envoyés</h1>
+
+    {% for msg in messages %}
+        <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
+            <strong>{{ msg.nom }}</strong> ({{ msg.email }}) <br>
+            <em>{{ msg.date_envoyee }}</em>
+            <p>{{ msg.message }}</p>
+        </div>
+    {% empty %}
+        <p>Aucun message pour le moment.</p>
+    {% endfor %}
+
+    <a href="/">Retour à l'accueil</a>
+</body>
+</html>
