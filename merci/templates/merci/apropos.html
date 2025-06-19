@@ -1,13 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
     <title>À propos</title>
+    <link rel="stylesheet" href="{% static 'merci/styles.css' %}">
 </head>
 <body>
+
+<div class="container">
+    <nav>
+        <a href="/">Accueil</a> |
+        <a href="/contact/">Contact</a> |
+        <a href="/messages/">Messages</a>
+    </nav>
+
+    <hr>
+
     <h1>À propos de nous</h1>
     <p>Bienvenue sur notre site !</p>
     <p>Ce projet a été créé avec Django pour apprendre à développer des applications web.</p>
+</div>
 
-    <a href="/">Accueil</a> | <a href="/contact/">Contact</a>
 </body>
 </html>

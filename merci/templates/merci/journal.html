@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Journal</title>
+    <link rel="stylesheet" href="{% static 'merci/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <a href="/">Accueil</a> |
+        <a href="/contact/">Contact</a> |
+        <a href="/messages/">Messages</a> |
+        <a href="/journal/">Journal</a> |
+        <a href="/parole/">Parole</a>
+        <hr>
+
+        <h1>Journal</h1>
+
+        {% for article in articles %}
+            <div class="article">
+                <h2>{{ article.titre }}</h2>
+                <p><em>{{ article.date_pub }}</em></p>
+                <p>{{ article.contenu }}</p>
+            </div>
+        {% empty %}
+            <p>Aucun article pour le moment.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

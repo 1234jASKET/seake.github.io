@@ -1,6 +1,30 @@
-<h1>Contactez-nous</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Envoyer</button>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="{% static 'merci/styles.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <a href="/">Accueil</a> |
+        <a href="/contact/">Contact</a> |
+        <a href="/messages/">Messages</a>
+    </nav>
+
+    <hr>
+
+    <h1>Formulaire de contact</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+
+</body>
+</html>

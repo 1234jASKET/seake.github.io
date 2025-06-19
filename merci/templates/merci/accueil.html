@@ -1,20 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
     <title>Accueil</title>
-    {% load static %}
+    <link rel="stylesheet" href="{% static 'merci/styles.css' %}">
 </head>
 <body>
 
-<a href="/">Accueil</a> | 
-<a href="/contact/">Contact</a> | 
-<a href="/messages/">Messages</a>
-<hr>
+<div class="container">
+    <nav>
+        <a href="/">Accueil</a> |
+        <a href="/contact/">Contact</a> |
+        <a href="/messages/">Messages</a>
+    </nav>
 
-<h1>Bienvenue</h1>
-<p>Ce site est un petit projet Django avec une page de contact, une base de données, et une page d’accueil.</p>
+    <hr>
 
-<img src="{% static 'merci/images/ma_photo.jpg' %}" alt="Photo" width="300">
+    <h1>Bienvenue sur mon site !</h1>
+    <p>Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle.</p>
+
+    <img src="{% static 'merci/images/donal.jpg' %}" alt="Ma photo" width="300">
+</div>
 
 </body>
 </html>
